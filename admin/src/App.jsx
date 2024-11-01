@@ -12,8 +12,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  // const url = 'https://order-delivery-mern-backend-1.onrender.com';
-  const url = 'http://localhost:8000';
+  const url = 'https://order-delivery-mern-backend-1.onrender.com';
+  // const url = 'http://localhost:8000';
 
   return (
     <div>

@@ -17,8 +17,9 @@ const OrderSummary = ({url}) => {
   const fetchAllOrdersSummery = async () =>{
     const response = await axios.get(url+`/api/order/summary?startDate=${startDate}&endDate=${endDate}`);
     if(response.data.success){
-      setSummary(response.data.data);
       console.log(response.data.data);
+      setSummary(response.data.data);
+      
     }else{
       toast.error("Error")
     }
@@ -32,7 +33,7 @@ const OrderSummary = ({url}) => {
   return (
     <div className='order add'>
        
-            <h2>Order Summary</h2>
+            <h2 className='text-center'>Order Summary</h2>
 
             <div>
                 <label>
@@ -51,6 +52,7 @@ const OrderSummary = ({url}) => {
                         onChange={(e) => setEndDate(e.target.value)}
                     />
                 </label>
+                 <br/>
                 <button onClick={fetchAllOrdersSummery}>Get Summary</button>
             </div>
 
